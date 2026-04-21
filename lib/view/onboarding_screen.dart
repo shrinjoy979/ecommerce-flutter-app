@@ -8,6 +8,9 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,4 +19,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       ),
     );
   }
+}
+
+class OnboardingItem {
+  final String image;
+  final String title;
+  final String description;
+
+  OnboardingItem({
+    required this.description,
+    required this.title,
+    required this.image,
+  });
 }
